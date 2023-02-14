@@ -23,7 +23,6 @@ jobs:
         dotnet-version: |
           5.0.x
           6.0.x
-
       # Run analyzers
     - name: Run Microsoft Security DevOps Analysis
       uses: microsoft/security-devops-action@preview
@@ -41,3 +40,4 @@ jobs:
       with:  
         name: alerts
         path: ${{ steps.msdo.outputs.sarifFile }}
+        
